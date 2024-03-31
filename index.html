@@ -20,10 +20,13 @@
             #annotation-section {
                 display: none;
             }
+
             #saveButton {
-            display: block;
-            margin: 0 auto; /* Center the save button horizontally */
-            margin-top: 20px; /* Add some top margin for separation */
+                display: block;
+                margin: 0 auto;
+                /* Center the save button horizontally */
+                margin-top: 20px;
+                /* Add some top margin for separation */
             }
 
             table {
@@ -43,7 +46,8 @@
         <h1 id="annotation">NLP Annotation</h1>
         <div id="upload-section">
             <p>Upload a file to start annotating</p>
-            <p>Don't forget to save your file once you are done ;)</p>
+            <p> Once you start annotating, you can download the annotated file via the save button.</p>
+            <p> You can even upload a partially filled annotation and pick up right where you left off</p>
             <input type="file" id="fileInput">
             <button id="startButton">Start Annotation</button>
         </div>
@@ -54,11 +58,12 @@
             <button id="saveButton" style="display:none;" onclick="saveAnnotations()">Save Annotations</button>
             <h3 id="annotation">Sample:</h3>
             <p id="sampleText">Sample text will be here</p>
-            
+
             <h3 id="annotation">Controls</h3>
-                <p> You can use the arrow keys to navigate between the text samples (left ← to go back, right → to move forward)</p>
-                <p> You can also use the arrow keys to annotate (↑ for positive and ↓ for negative)</p>
-                <p> You can also use the buttons below to annotate the text</p>
+            <p> You can use the arrow keys to navigate between the text samples (left ← to go back, right → to move
+                forward)</p>
+            <p> You can also use the arrow keys to annotate (↑ for positive and ↓ for negative)</p>
+            <p> You can also use the buttons below to annotate the text</p>
             <table>
                 <tr>
                     <td></td>

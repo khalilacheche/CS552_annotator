@@ -62,14 +62,14 @@ function keyStroke(key) {
 function back() {
     currentLine--;
     if (currentLine < 0) {
-        currentLine = 0;
+        currentLine = lines.length - 1;
     }
     showNextLine();
 }
 function next() {
     currentLine++;
     if (currentLine >= lines.length) {
-        currentLine = lines.length - 1;
+        currentLine = 0;
     }
     showNextLine();
 }
