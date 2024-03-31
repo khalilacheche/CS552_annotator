@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Data Annotation Task</title>
+        <style>
+            /* Simple CSS for layout */
+            body {
+                font-family: Arial, sans-serif;
+                padding: 20px;
+                text-align: center;
+                /* Center align all elements */
+            }
+
+            #upload-section {
+                margin-bottom: 20px;
+            }
+
+            #annotation-section {
+                display: none;
+            }
+            #saveButton {
+            display: block;
+            margin: 0 auto; /* Center the save button horizontally */
+            margin-top: 20px; /* Add some top margin for separation */
+            }
+
+            table {
+                margin: 0 auto;
+                /* Center the table horizontally */
+                text-align: center;
+                /* Center align table content */
+            }
+
+            table td {
+                padding: 10px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1 id="annotation">NLP Annotation</h1>
+        <div id="upload-section">
+            <p>Upload a file to start annotating</p>
+            <p>Don't forget to save your file once you are done ;)</p>
+            <input type="file" id="fileInput">
+            <button id="startButton">Start Annotation</button>
+        </div>
+        <div id="annotation-section">
+            <p id="progress">0/80</p>
+            <p id="alreadyAnnotated">0</p>
+            <p id="givenAnnotation"></p>
+            <button id="saveButton" style="display:none;" onclick="saveAnnotations()">Save Annotations</button>
+            <h3 id="annotation">Sample:</h3>
+            <p id="sampleText">Sample text will be here</p>
+            
+            <h3 id="annotation">Controls</h3>
+                <p> You can use the arrow keys to navigate between the text samples (left ← to go back, right → to move forward)</p>
+                <p> You can also use the arrow keys to annotate (↑ for positive and ↓ for negative)</p>
+                <p> You can also use the buttons below to annotate the text</p>
+            <table>
+                <tr>
+                    <td></td>
+                    <td><button onclick="annotate('positive')">Positive</button></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><button onclick="back">Previous</button></td>
+                    <td></td>
+                    <td><button onclick="next">Next</button></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><button onclick="annotate('negative')">Negative</button></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+
+</html>
