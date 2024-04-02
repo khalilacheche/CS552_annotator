@@ -39,6 +39,20 @@
             table td {
                 padding: 10px;
             }
+			
+			#sampleText {
+			    text-align: justify;
+				max-width: 650px;
+				line-height: 1.2;
+				border: 1px solid #eee;
+				padding: 20px;
+				border-radius: 8px;
+			}
+			
+			#sampleContainer {
+				display: flex;
+				justify-content: center;
+			}
         </style>
     </head>
 
@@ -57,7 +71,9 @@
             <p id="givenAnnotation"></p>
             <button id="saveButton" style="display:none;" onclick="saveAnnotations()">Save Annotations</button>
             <h3 id="annotation">Sample:</h3>
-            <p id="sampleText">Sample text will be here</p>
+			<div id="sampleContainer">
+				<p id="sampleText">Sample text will be here</p>
+			</div>
 
             <h3 id="annotation">Controls</h3>
             <p> You can use the arrow keys to navigate between the text samples (left ← to go back, right → to move
